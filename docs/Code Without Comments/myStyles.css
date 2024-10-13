@@ -1,0 +1,179 @@
+body {
+    background: #2e3546;
+    color: #fff;
+    padding: 10px 10em;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 400%;
+    text-align: center;
+    margin: 0;
+    color: #a1353e;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    text-shadow: -1px -1px #000, -1px 1px #000, 1px -1px #000, 1px 1px #000;
+}
+
+
+/*NAVIGATION*/
+nav {
+    position: sticky;
+    top: -1px;
+    padding: 0.001em 0;
+    background-color: #2e3546;
+    border-bottom: 1px solid #fff;
+    margin: 0 -6em;
+}
+
+nav ul {
+    padding: 0;
+    padding-left: 2em;
+}
+
+nav li {
+    display: inline; 
+    font-family: Libre Baskerville, sans-serif;
+    margin-right: 1em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link, a:visited {
+    color: #fff;
+}
+
+nav a:active, a:hover {
+    color: #eedb05;
+}
+
+
+/*TEXT*/
+h2 {
+    font-family: Libre Baskerville, sans-serif;
+    font-size: 160%;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: Libre Baskerville, sans-serif;
+    font-size: 130%;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-family: Libre Baskerville, sans-serif;
+    font-size: 105%;
+    margin-top: 10px;
+    margin-left: 2em;
+}
+
+p {
+    font-family: DM Sans, Quicksand, sans-serif;
+    font-size: 100%;
+}
+
+q {
+    font-family: DM Sans, Quicksand, sans-serif;
+    color: #a6a6a6;
+    font-style: italic;
+    font-size: 100%;
+}
+
+
+/*IMAGES*/
+img {
+    display: block;
+    margin: 20px auto;
+    clear: both;
+    border: 1px solid #000;
+}
+
+img.rightFloat {
+    width: 400px;
+    float: right;
+    margin-left: 20px;
+}
+
+img#leftFloat {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+div.sidebar {
+    float: right;
+    clear: both;
+    width: 20%;
+    background-color: #535b70;
+    margin: 0.5em 0 0.5em 2em;
+    padding: 0.75em 2em;
+}
+
+
+/*TABLE*/
+table {
+    color: #e6e6e6;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th {
+    border: 1px solid #fff;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*SCROLL TO TOP BUTTON*/
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #535b70;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+  
+#myBtn:hover {
+    background-color: #22242a;
+}
+
+
+/*IFRAME*/
+iframe {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 576px;
+    frameBorder: 0;
+    background-color: #000;
+    display: block;
+}
+
+
+/*FOOTER*/
+footer {
+    padding: 0.001em 0;
+    margin: 0 -6em;
+}
+
+footer p {
+    font-size: 60%;
+}

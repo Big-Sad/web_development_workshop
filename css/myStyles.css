@@ -1,0 +1,236 @@
+
+/*CSS is written much differently to HTML. It's comments are similar to Java, but it only uses the multi-line comment format (even if it's for a single line: "/*" and "* /".
+The way CSS identifies what it's styling is calling its tag and writing styling between two curly braces "{ }"*/
+
+/*COLOR*/
+/*There are 8 ways to declare color,
+Hexadecimal - #xxxxxx
+    The 1st and 2nd letters are for R in RGB, the 3rd and 4th letters are for G in RGB, and the 5th and 6th stand for B in RGB. For example, #FF0000 would be only red while #0000FF would only be blue. Capitialization does not matter in this format. There is also a shortcut where you only write the first 3 numbers if the number repeats itself, so instead of writing #ffffff for white, you only need to write #fff. Same with any repeating number, #cdc for #cdccdc or #73a for #73a73a
+Hexadecimal with Transparency - #xxxxxxxx
+    The last 2 letters stand for transparency, and the first 6 are the same as hexadecimal
+RGB - rgb(x,x,x)
+    RGB takes values from 0 to 255. The 1st value gives the value of red, the 2nd value give the value of green, and the third value is the value of blue.
+RGBA - rgba(x,x,x,x)
+    The first 3 values are the same as RGB but the last value is between 0.0 (transparent) and 1.0 (opaque). The last value effects transparency. You may also know this as the alpha channel.
+HSL - hsl(x,x%,x%)
+    HSL stands for Hue, Saturation, and Lightness. The 1st value is a number between 0 and 360 (on a color wheel) that determines the color. The 2nd number is betwwen 0% and 100% for the saturation. The last number is also 0% and 100% for lightness (where 0% is black and 100% is white). The % is necessary for the saturation and lightness values.
+HSLA - hsl(x,x%,x%,x)
+    HSLA is the same as HSL but has a 4th transparency value like RGBA.
+Predefined/Cross-browser
+    These are text that corresponds with a predefined color. Here is a list of 140 that are commonly supported: https://www.w3schools.com/colors/colors_names.asp
+currentcolor
+    currentcolor is basically a variable that uses whatever color has been defined. If what you are styling an element that you have defined color for, it uses that. Otherwise it uses what body's color is (black by default) */
+
+/*Sizing Units are different units you can use when modifying size, spacing, or location. Most commonly, you will use:
+    px - pixels
+    pt - points
+    em - relative to font-size
+    rem - relative to root font-size
+    % - relative to parent element
+There are more sizing units. Your relative units can also be specified on whether it's vertical or horizontal*/
+
+/*Margin/Padding Shorthand - There are 3 types of shorthand for margin/padding.
+    4 values - specify margin/padding for each direction (top, right, bottom, left)
+    2 values - specify margin/padding for axes (top/bottom, left/right) or (vertical, horizontal)
+    1 value - value is given to all directions*/
+
+/*Body covers styling that is applied to everything*/
+body {
+    background: #2e3546; /*can also be written as background-color*/
+    color: #fff; /*color changes the text color*/
+    padding: 10px 10em; /*spacing inside window*/
+    font-size: 18px;
+}
+
+h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 400%;
+    text-align: center;
+    margin: 0;
+    color: #a1353e;
+    /*text-shadow contains 4 information poitns, horizontal movement, vertical movement, blur radius (optional), color (optional)*/
+    /*This is an example of putting multiple stylings in one property. It's not recommended, but can be doe to create pseudo borders.*/
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    text-shadow: -1px -1px #000, -1px 1px #000, 1px -1px #000, 1px 1px #000;
+}
+
+
+/*NAVIGATION*/
+nav {
+    position: sticky;
+    top: -1px;
+    padding: 0.001em 0;
+    background-color: #2e3546;
+    border-bottom: 1px solid #fff;
+    margin: 0 -6em;
+}
+
+/*Below is an example of specifying a selector's parent. For example, the following properties will only effect ul in nav as opposed to all ul.*/
+nav ul {
+    padding: 0;
+    padding-left: 2em; /*You can specify direction with certain css properties. This particular one says that only padding to the left will be effected*/
+}
+
+nav li {
+    display: inline; /*Display has mulitple values that can be given. Some of the ones you will use most will be inline, block, and none.
+        inline - displays elements in the same line
+        block - element starts on a new line and takes up whole width
+        none - element is not displayed/is hidden
+    Visit https://www.w3schools.com/cssref/pr_class_display.php for more examples*/
+    font-family: Libre Baskerville, sans-serif;
+    margin-right: 1em;
+}
+
+nav a {
+    text-decoration: none; /*Ways to give text 'decoration'. The value 'none' removes all lines from the text. Normally, you can give this property up to 4 values: line type, color, style, and thickness. More info here: https://www.w3schools.com/cssref/pr_text_text-decoration.php */
+}
+
+/*Links can have 4 types of special selectors, :link, :visited, :active, :hover. They are primarily used on clickable links. :hover can be used on other elemnts though.
+    :link - normal link (unvisited)
+    :visited - visited link
+    :hover - when your curser is over the element
+    :active - when your curser is clicking the element
+Traditionally, you will pair :link and :visted together and :active and :hover together. You will often put changes in :active and :hover*/
+nav a:link, a:visited {
+    color: #fff;
+}
+
+nav a:active, a:hover {
+    color: #eedb05;
+}
+
+
+/*TEXT*/
+h2 {
+    font-family: Libre Baskerville, sans-serif;
+    font-size: 160%;
+    margin-bottom: 0; /*You can use 0 without any units*/
+}
+
+h3 {
+    font-family: Libre Baskerville, sans-serif;
+    font-size: 130%;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-family: Libre Baskerville, sans-serif;
+    font-size: 105%;
+    margin-top: 10px;
+    margin-left: 2em;
+}
+
+p {
+    font-family: DM Sans, Quicksand, sans-serif;
+    font-size: 100%;
+}
+
+q {
+    font-family: DM Sans, Quicksand, sans-serif;
+    color: #a6a6a6;
+    font-style: italic;
+    font-size: 100%;
+}
+
+
+/*IMAGES*/
+img {
+    display: block;
+    margin: 20px auto;
+    clear: both; /*clear specifies if floated elements are allowed next to floated elements. You can specify none (don't clear), left/right (directional clear), or both (clear both left and right sides)*/
+    border: 1px solid #000; /*border has 3 properties. width, style, and color. You can see more styles here: https://www.w3schools.com/cssref/pr_border-style.php */
+}
+
+
+/*classes are specified in css by '.[class name]'. ids are specified in css by '#[id name]'. You can specify what element the class or id is part of, but it's not necessary.*/
+img.rightFloat {
+    width: 400px;
+    float: right;
+    margin-left: 20px;
+}
+
+img#leftFloat {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+div.sidebar {
+    float: right;
+    clear: both;
+    width: 20%;
+    background-color: #535b70;
+    margin: 0.5em 0 0.5em 2em;
+    padding: 0.75em 2em;
+}
+
+
+/*TABLE*/
+table {
+    color: #e6e6e6;
+    border-collapse: collapse;/*border-collapse has 2 possible values, separate and collapse. separate gives a table a line around each cell and a line around the whole table. collapse makes the table look like a normal table (think excel)*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th {
+    border: 1px solid #fff;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*SCROLL TO TOP BUTTON*/
+#myBtn {
+    display: none;
+    position: fixed; /*The position property is very versitile. You will usually have 3 you want to use: absolute, fixed, and sticky.
+        absolute - relative to 1st positioned ancestor element (basically static)
+    fixed - relative to browser window
+    sticky - toggles between relative and fixed based on user's scroll position*/
+    bottom: 20px; /*spacing from the bottom. Can specify top, bottom, right, or left to specify distance from that edge*/
+    right: 30px;
+    z-index: 99; /*How 'close' the element is to the browser window. Can also be thought of as a layer. 0 is the back and highter numbers get closer to the front.
+    Usually used to specify if an element should be on top of all other elements. */
+    border: none;
+    outline: none;
+    background-color: #535b70;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+  
+#myBtn:hover {
+    background-color: #22242a;
+}
+
+
+/*IFRAME*/
+iframe {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 576px;
+    frameBorder: 0;
+    background-color: #000;
+    display: block;
+}
+
+
+/*FOOTER*/
+footer {
+    padding: 0.001em 0;
+    margin: 0 -6em;
+}
+
+footer p {
+    font-size: 60%;
+}

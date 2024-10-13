@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="../prism/prism.css"/>
+        <!--JavaScript-->
+        <script src="../prism/prism.js" type="text/javascript"></script>
+    </head>
+
+<!--This is a special HTML file since it uses prism to format code. Prism allows you to display your code snippets in your HTML website. You can use Prism yourself here: https://prismjs.com/. Prism uses css and js to style code.
+    Prism has special instructions on how to use it. But for our purposes, <pre> and <code> are used to display code. <pre> needs to surround <code> and <code> needs to directly touch your code if you want it on the first (and last) line.-->
+<body class="line-numbers">
+<pre>
+<code class="language-java">package problem_001;
+
+    /*If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+    
+    Find the sum of all the multiples of 3 or 5 below 1000.*/
+    public class Main {
+    
+        public static void main(String[] args) {
+            int total = 0;
+            for(int t = 1; t < 1000; t++) {
+                if(t%3 == 0) {
+                    total = total + t;
+                }
+                else if(t%5 == 0) {
+                    total = total + t;
+                }
+            }//end for loop
+            
+            System.out.println(total);
+        }//ends method - main
+    }//ends class - Main</code>
+        </pre>
+    </body>
+   
+</html>
